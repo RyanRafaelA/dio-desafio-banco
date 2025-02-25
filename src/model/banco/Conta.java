@@ -1,4 +1,4 @@
-package model;
+package model.banco;
 
 public abstract class Conta {
     private final static int AGENCIA_PADRAO = 1;
