@@ -27,6 +27,6 @@ public class Cliente {
     @Override
     public String toString() {
         return getNome()+" - "+String.valueOf(getSexo()).toUpperCase()
-                +"\n"+getDataNascimento()+" - "+getCpf();
+                +"\n"+sdf.format(getDataNascimento())+" - "+getCpf();
     }
 }

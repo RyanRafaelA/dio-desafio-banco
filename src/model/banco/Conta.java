@@ -11,8 +11,9 @@ public abstract class Conta {
     protected double saldo;
     private Cliente cliente;
 
-    public Conta(Cliente novoCliente){
+    public Conta(Cliente novoCliente, double saldoInicial){
         this.cliente = novoCliente;
+        this.saldo = saldoInicial;
         agencia = AGENCIA_PADRAO;
         numero = SEQUENCIAL++;
     }
@@ -32,5 +33,13 @@ public abstract class Conta {
     public void transferir(double valor, Conta contaDestino){
         sacar(valor);
         contaDestino.depositar(valor);
+    }
+
+    @Override
+    public String toString() {
+        return "Titula: "+cliente.getNome()
+                +"\nAgencia: "+getAgencia()
+                +"\nNumero Conta: "+getNumero()
+                +"\nSaldo: "+String.format("%.2f", getSaldo());
     }
 }
