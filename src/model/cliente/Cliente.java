@@ -26,7 +26,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return getNome()+" - "+String.valueOf(getCpf()).toUpperCase()
+        return getNome()+" - "+String.valueOf(getSexo()).toUpperCase()
                 +"\n"+getDataNascimento()+" - "+getCpf();
     }
 }

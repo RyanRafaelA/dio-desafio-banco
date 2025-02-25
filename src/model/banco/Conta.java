@@ -1,14 +1,18 @@
 package model.banco;
 
+import model.cliente.Cliente;
+
 public abstract class Conta {
     private final static int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
 
-    protected int agencia;
-    protected int numero;
+    private int agencia;
+    private int numero;
     protected double saldo;
+    private Cliente cliente;
 
-    public Conta(){
+    public Conta(Cliente novoCliente){
+        this.cliente = novoCliente;
         agencia = AGENCIA_PADRAO;
         numero = SEQUENCIAL++;
     }
